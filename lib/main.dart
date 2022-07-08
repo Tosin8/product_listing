@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_listing/extension/rating.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -116,6 +117,7 @@ class _ProductBoxState extends State<ProductBox> {
                     Text(
                       price.toString(),
                     ),
+                    const RatingBox(),
                   ]),
             ))
           ],

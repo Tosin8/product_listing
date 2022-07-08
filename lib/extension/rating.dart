@@ -52,11 +52,45 @@ class _RatingBoxState extends State<RatingBox> {
                     Icons.star_border,
                     size: _size,
                   )),
-            color: Colors.red,
+            color: Colors.red[500],
             onPressed: _setRatingAsOne,
             iconSize: _size,
           ),
-        )
+        ),
+        Container(
+          padding: const EdgeInsets.all(0),
+          child: IconButton(
+            icon: (_rating >= 2
+                ? Icon(
+                    Icons.star,
+                    size: _size,
+                  )
+                : Icon(
+                    Icons.star_border,
+                    size: _size,
+                  )),
+            color: Colors.red[500],
+            onPressed: _setRatingAsTwo,
+            iconSize: _size,
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(0),
+          child: IconButton(
+            icon: (_rating >= 3
+                ? Icon(
+                    Icons.star,
+                    size: _size,
+                  )
+                : Icon(
+                    Icons.star_border,
+                    size: _size,
+                  )),
+            color: Colors.red[500],
+            onPressed: _setRatingAsThree,
+            iconSize: _size,
+          ),
+        ),
       ],
     );
   }

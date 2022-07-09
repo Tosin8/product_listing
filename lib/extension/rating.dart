@@ -9,8 +9,27 @@ class RatingBox extends StatefulWidget {
 }
 
 class _RatingBoxState extends State<RatingBox> {
-  final Product item; 
-  
+  int rating = 0;
+
+  void updateRatingAsOne() {
+    setState(() {
+      rating = 1;
+    });
+  }
+
+  void updateRatingAsTwo() {
+    setState(() {
+      rating = 2;
+    });
+  }
+
+  void updateRatingAsThree() {
+    setState(() {
+      rating = 3;
+    });
+  }
+
+  final Product item;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +56,7 @@ class _RatingBoxState extends State<RatingBox> {
                     size: _size,
                   )),
             color: Colors.red[500],
-            onPressed:() => item.updateRating(1),
+            onPressed: () => item.updateRatingAsOne(),
             iconSize: _size,
           ),
         ),
@@ -54,7 +73,7 @@ class _RatingBoxState extends State<RatingBox> {
                     size: _size,
                   )),
             color: Colors.red[500],
-            onPressed:() => item.updateRating(2),
+            onPressed: () => item.updateRatingAsTwo(),
             iconSize: _size,
           ),
         ),
@@ -71,7 +90,7 @@ class _RatingBoxState extends State<RatingBox> {
                     size: _size,
                   )),
             color: Colors.red[500],
-            onPressed:() => item.updateRating(3),
+            onPressed: () => item.updateRatingAsThree(),
             iconSize: _size,
           ),
         ),
